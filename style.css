@@ -1,0 +1,125 @@
+*{
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    background-color: #ed092a;
+    color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.329); /* Adicione sua sombra aqui */
+} 
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 70px;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+nav a:hover{
+    color: #dbdbdb;
+}
+.search-box {
+    display: flex;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+.search-box input {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    outline: none;
+}
+.area-titulo{
+    display: flex;
+}
+.titulo{
+    font-weight: bold;
+    color: #ed092a;
+    margin-top: 80px;
+}
+.subtitulo{
+    font-family: 'Cedarville Cursive';
+    font-weight: bold;
+    color: #ed092a;
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+.containerP{
+    position: relative;
+    padding: 15px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.galeria-wrapper{
+    overflow-x: auto;
+}
+ 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.galeria-wrapper::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.galeria-wrapper{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.galeria{
+    display: flex;
+    flex: row wrap;
+    gap: 15px;
+}
+.arrow-right, .arrow-left{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    width: 20px;
+    font-size: 20px;
+    line-height: 250px;
+    text-align: center;
+    color: red;
+    cursor: pointer;
+    border: none;
+    background:linear-gradient(to left, transparent 0%, black 150%);
+    opacity: 0.6;
+    transition: all 600ms ease-in-out;
+}
+.arrow-left{
+    left: auto;
+    right: 0;
+    background:linear-gradient(to right, transparent 0%, black 150%);
+}
+.arrow-right:hover,
+.arrow-left:hover{
+    opacity: 1;
+}
+
+.item{
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: all 600ms ease-in-out;
+}
+.current-item{
+    opacity: 1;
+}
